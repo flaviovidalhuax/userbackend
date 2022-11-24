@@ -26,8 +26,12 @@ const FindRandomUsers = () => {
 }
 //deleated
 const DeleteOneUser = (id) =>{
-    const filteredUser = usersDB.find( (user)=>{user.id ==id })
-    usersDB.pop(id)
+    const userindex = usersDB.findIndex( (user)=>user.id ==id )
+   if (userindex !== -1) {
+    usersDB.slice(userindex,1)
+    return true
+   }
+   return false
 }
 
 

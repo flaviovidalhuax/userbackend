@@ -9,7 +9,7 @@ router.post('/users', Services.postNewUsers)
 
 router.get('/users/random', Services.getRandomUsers )
 router.get('/users/:id', Services.getAllUsersById)
-router.delete('/users/delete/:id', Services.DeleteAllUsersById)
+router.delete('/users/:id', Services.DeleteAllUsersById)
 
 
 module.exports = router

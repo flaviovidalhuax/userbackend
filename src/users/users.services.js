@@ -20,10 +20,10 @@ const getAllUsersById = (req,res) => {
 //deleat one user
 const DeleteAllUsersById = (req,res) => {
     const id = req.params.id
-    //const data = usersControlers.findUsersById(id)
+  
     const deleted = usersControlers.DeleteOneUser(id) 
     if (deleted) {
-        res.status(200).json(data)
+        res.status(200).json({mesege:'seccesfuly'})
     }else{
         res.status(404).json({mensaje:'Invalid ID'})
     }
